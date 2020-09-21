@@ -29,7 +29,7 @@ int main(){
 
 	}
 
-	for(int i = 0; i < 3; i++){
+	for(int i = 0; i < 4; i++){
 
 		if( CircularBufferGetValue(handle_container_d, &data_d, sizeof(int)) == EXIT_FAILURE ) puts("The buffer_d is empty!");
 		if( CircularBufferGetValue(handle_container_f, &data_f, sizeof(float)) == EXIT_FAILURE ) puts("The buffer_f is empty!");

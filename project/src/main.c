@@ -29,7 +29,7 @@ int main(){
 
 	}
 
-	for(int i = 0; i < 4; i++){
+	for(int i = 0; i < 2; i++){
 
 		if( CircularBufferGetValue(handle_container_d, &data_d, sizeof(int)) == EXIT_FAILURE ) puts("The buffer_d is empty!");
 		if( CircularBufferGetValue(handle_container_f, &data_f, sizeof(float)) == EXIT_FAILURE ) puts("The buffer_f is empty!");
@@ -38,12 +38,16 @@ int main(){
 	}
 
 	printf("The size of the buffer_d : %d\n", CircularBufferSize(handle_container_d));
-	printf("The capacity of the buffer_d : %d\n", CircularBufferCapacity(handle_container_d));
+	printf("The capacity of the buffer_d : %d\n", _CIRC_BUF_GET_CAPACITY(handle_container_d));
 	printf("The value is gotten from the buffer_d : %d\n\n", data_d);
 
 	printf("The size of the buffer_f : %d\n", CircularBufferSize(handle_container_f));
 	printf("The capacity of the buffer_f : %d\n", CircularBufferCapacity(handle_container_f));
 	printf("The value is gotten from the buffer_f : %f\n\n", data_f);
+
+	_CIRC_BUF_FREE(handle_container_d);
+	_CIRC_BUF_FREE(handle_container_f);
+
 
 	return 0;
 }

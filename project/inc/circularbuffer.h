@@ -4,6 +4,11 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <stddef.h>
+#include <stdlib.h>
+
+// Function macro definitions
+#define _CIRC_BUF_GET_CAPACITY(circular_buf)	((circular_buf)->capacity)
+#define _CIRC_BUF_FREE(circular_buf)			(free(circular_buf))
 
 typedef enum{
 

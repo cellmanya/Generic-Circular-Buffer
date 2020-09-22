@@ -10,15 +10,15 @@ int main(){
 
 	//Test1 Int Array
 	int * buffer_d = (int*)malloc(DEFAULT_CAPACITY * sizeof(int));
-	if( buffer_d == NULL ) { printf("NULL is assigned to buffer_d!");	return (int)NULL; }
+	if( buffer_d == NULL ) { printf("NULL is assigned to buffer_d!");	return EXIT_FAILURE; }
 	int data_d = 5;
 	cbuf_ptr handle_container_d = CircularBufferInit(buffer_d, DEFAULT_CAPACITY, sizeof(int));
 
 
 	//Test2 Float Array
 	float * buffer_f = (float*)malloc(DEFAULT_CAPACITY * sizeof(float));
-	if( buffer_f == NULL ) { printf("NULL is assigned to buffer_f!");	return (int)NULL; }
-	float data_f = 34.456;
+	if( buffer_f == NULL ) { printf("NULL is assigned to buffer_f!");	return EXIT_FAILURE; }
+	float data_f = 34.456f;
 	cbuf_ptr handle_container_f = CircularBufferInit(buffer_f, DEFAULT_CAPACITY, sizeof(float));
 
 

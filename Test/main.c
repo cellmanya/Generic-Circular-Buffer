@@ -45,12 +45,12 @@ int main(){
 	}
 
 
-	printf("The size of the buffer_d : %d\n", CircularBufferSize(handle_container_d));
-	printf("The capacity of the buffer_d : %d\n", CircularBufferCapacity(handle_container_d));
+	printf("The size of the buffer_d : %zu\n", CircularBufferSize(handle_container_d));
+	printf("The capacity of the buffer_d : %zu\n", CircularBufferCapacity(handle_container_d));
 	printf("The value is gotten from the buffer_d : %d\n\n", data_d);
 
-	printf("The size of the buffer_f : %d\n", CircularBufferSize(handle_container_f));
-	printf("The capacity of the buffer_f : %d\n", CircularBufferCapacity(handle_container_f));
+	printf("The size of the buffer_f : %zu\n", CircularBufferSize(handle_container_f));
+	printf("The capacity of the buffer_f : %zu\n", CircularBufferCapacity(handle_container_f));
 	printf("The value is gotten from the buffer_f : %f\n\n", data_f);
 
 
